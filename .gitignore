@@ -1,0 +1,118 @@
+############################
+#   GLOBAL / MULTIREPO
+############################
+
+# Dependencias
+node_modules/
+
+# Salidas de build
+dist/
+build/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# Entornos
+.env
+.env.*.local
+*.local.env
+
+# Cache general
+.cache/
+.tmp/
+temp/
+tmp/
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+############################
+#   ANGULAR
+############################
+
+# Angular cache
+.angular/
+.angular/cache/
+
+# Compilación Angular
+*.ngsummary.json
+*.ngfactory.ts
+*.ngstyle.ts
+
+# SSR / Universal
+server.ts
+server/main.js
+server/main.ts
+
+# Test Angular
+coverage/
+test-output/
+
+############################
+#   NODE
+############################
+
+# PM2
+.pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+############################
+#   MULTIREPO / MONOREPO
+############################
+
+# Si usas Nx
+nx-cache/
+.nx/
+
+# Si usas Turborepo
+.turbo/
+
+# Si usas Lerna
+lerna-debug.log
+
+# Si usas pnpm workspaces
+.pnpm-store/
+
+############################
+#   UTILIDADES
+############################
+
+# Compilación de documentación
+docs-dist/
+documentation/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Archivos de paquetes
+*.tgz
+
+# Archivos de lock opcionales (si quieres evitar conflictos)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
