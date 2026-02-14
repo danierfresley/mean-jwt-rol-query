@@ -1,0 +1,55 @@
+<div class="users-page">
+  <header class="header">
+    <h1>Usuarios</h1>
+    <button type="button" class="btn-logout" (click)="logout()">Cerrar sesión</button>
+  </header>
+
+  @if (errorMessage()) {
+    <p class="error">{{ errorMessage() }}</p>
+  }
+
+  @if (loading()) {
+    <p class="loading">Cargando…</p>
+  } @else {
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Fecha registro</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (u of users(); track u._id) {
+            <tr>
+              <td>{{ u.name }}</td>
+              <td>{{ u.email }}</td>
+              <td>{{ u.createdAt | date : 'short' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    @if (meta().totalPages > 1) {
+      <div class="pagination">
+        <button
+          type="button"
+          [disabled]="page() <= 1"
+          (click)="loadPage(page() - 1)"
+        >
+          Anterior
+        </button>
+        <span>Página {{ page() }} de {{ meta().totalPages }} ({{ meta().total }} usuarios)</span>
+        <button
+          type="button"
+          [disabled]="page() >= meta().totalPages"
+          (click)="loadPage(page() + 1)"
+        >
+          Siguiente
+        </button>
+      </div>
+    }
+  }
+</div>

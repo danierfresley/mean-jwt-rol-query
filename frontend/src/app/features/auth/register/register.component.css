@@ -1,0 +1,89 @@
+.auth-card {
+  max-width: 360px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.auth-card h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.auth-card .error {
+  color: #c62828;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-card .field {
+  margin-bottom: 1rem;
+}
+
+.auth-card label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+.auth-card .hint {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #c62828;
+}
+
+.auth-card button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.auth-card button:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.auth-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-card .link {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.auth-card .link a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.auth-card .link a:hover {
+  text-decoration: underline;
+}
